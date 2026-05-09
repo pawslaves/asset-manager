@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>asset manager</title>
+        <link rel="icon" href="icon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div id="toast" class="toast"></div>
+
+        <div class="app">
+            <aside class="side">
+                <div class="brand">
+                    <span class="logo-mark">
+                        <img src="icon.png" alt="" />
+                    </span>
+                    <div class="meta">
+                        <span class="name">paw's asset manager</span>
+                    </div>
+                </div>
+
+                <nav>
+                    <button class="tab active" data-tab="ext" type="button">
+                        <span class="tab-label">extract</span>
+                    </button>
+                    <button class="tab" data-tab="dmp" type="button">
+                        <span class="tab-label">dump</span>
+                    </button>
+                </nav>
+            </aside>
+
+            <main id="ext-view" class="view">
+                <header>
+                    <h1>extract assets</h1>
+                    <p>bulk reupload for animations and audio</p>
+                </header>
+
+                <button id="ext-zone" class="drop-zone" type="button">
+                    <div class="drop-inner">
+                        <span class="drop-icon">+</span>
+                        <span id="ext-name" class="drop-text"
+                            >select .rbxlx</span
+                        >
+                    </div>
+                </button>
+
+                <div class="controls">
+                    <div class="mode-group">
+                        <button
+                            class="mode-btn active"
+                            data-mode="both"
+                            type="button"
+                        >
+                            both
+                        </button>
+                        <button
+                            class="mode-btn"
+                            data-mode="audio"
+                            type="button"
+                        >
+                            audio
+                        </button>
+                        <button
+                            class="mode-btn"
+                            data-mode="animation"
+                            type="button"
+                        >
+                            anims
+                        </button>
+                    </div>
+                    <button id="run-reup" class="btn" type="button">
+                        start reupload
+                    </button>
+                </div>
+
+                <div class="progress">
+                    <div class="track">
+                        <div id="bar" class="fill"></div>
+                    </div>
+                    <div class="info">
+                        <span id="stat">idle</span>
+                        <span id="perc">0%</span>
+                    </div>
+                </div>
+            </main>
+
+            <main id="dmp-view" class="view" style="display: none">
+                <header>
+                    <h1>dump scripts</h1>
+                    <p>extract scripts from .rbxlx</p>
+                </header>
+
+                <button id="dmp-zone" class="drop-zone" type="button">
+                    <div class="drop-inner">
+                        <span class="drop-icon">+</span>
+                        <span id="dmp-name" class="drop-text"
+                            >select .rbxlx</span
+                        >
+                    </div>
+                </button>
+
+                <div class="controls">
+                    <button id="run-dump" class="btn" type="button">
+                        start dump
+                    </button>
+                </div>
+
+                <div class="progress">
+                    <div class="track">
+                        <div id="dmp-bar" class="fill"></div>
+                    </div>
+                    <div class="info">
+                        <span id="dmp-stat">idle</span>
+                        <span id="dmp-perc">0%</span>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
