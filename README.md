@@ -6,7 +6,7 @@
 
 <h2>screenshots:</h2>
 
-<img src="https://github.com/pawslaves/asset-manager/blob/main/ui/Screenshot_3.png?raw=true" alt="project-screenshot" width="400" height="400/">
+<img src="https://github.com/pawslaves/asset-manager/blob/main/ui/Screenshot_3.png?raw=true" alt="project-screenshot" width="800" height="800/">
 
 <h2>installation steps:</h2>
 
